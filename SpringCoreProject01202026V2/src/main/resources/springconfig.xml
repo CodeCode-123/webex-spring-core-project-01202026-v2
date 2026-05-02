@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean id="baseball" class="com.code.core.entity.Baseball">
+	    <constructor-arg ref="fortuneteller"></constructor-arg>
+		<property name="name" value="Johnson"></property>
+		<property name="emailId" value="johnson@usa.com"></property>
+	</bean>
+	<bean id="tennis" class="com.code.core.entity.Tennis">
+	    <constructor-arg ref="fortuneteller"></constructor-arg>
+		<property name="name" value="Serena Williams"></property>
+		<property name="emailId" value="serena@usa.com"></property>
+	</bean>
+	<bean id="fortuneteller" class="com.code.core.entity.FortuneTellerService"></bean>
+</beans>
